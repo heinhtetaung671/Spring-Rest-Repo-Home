@@ -17,6 +17,6 @@ public class Position {
 	private String name; 
 	
 	@ManyToOne(optional = false)
-	private Department department;
+	private Department department;	
 	
 }

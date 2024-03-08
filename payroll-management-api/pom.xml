@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jdc.payroll</groupId>
-	<artifactId>payroll-management</artifactId>
+	<artifactId>payroll-management-api</artifactId>
 	<version>1.0</version>
 	<name>payroll-management</name>
 	<description>Payroll management with Spring Boot</description>
