@@ -1,25 +1,26 @@
 package com.jdc.payroll.model.entity;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToOne;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Data
-public class Password {
+@Getter
+@Setter
+public class PositionPasswordPolicy {
 
 	@Id
 	private int id;
-	private String password;
-	private LocalDate createDate;
-	private LocalDate modifiedDate;
 	
 	@OneToOne
 	@MapsId
-	private Employee employee;
+	private Position position;
+	
+	@ManyToOne
+	private PasswordPolicy passwordPolicy;
 	
 }
