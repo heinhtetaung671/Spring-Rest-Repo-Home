@@ -5,6 +5,7 @@ import java.util.Map;
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -20,8 +21,9 @@ import jakarta.persistence.EntityManagerFactory;
 
 @EnableJpaAuditing
 @Configuration
+@ComponentScan("com.jdc.home.model")
 @EnableTransactionManagement
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = "com.jdc.home.model.repo")
 public class DatabaseConfig {
 
 	@Bean

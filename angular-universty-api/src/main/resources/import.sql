@@ -1,0 +1,1 @@
+insert into Category (name) values ('Web Development');
