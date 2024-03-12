@@ -17,8 +17,7 @@ import lombok.Setter;
 public class Course extends AbstractEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private String id;
 	@Column(length = 45)
 	private String name;
 	@Column(nullable = false)
@@ -29,7 +28,8 @@ public class Course extends AbstractEntity {
 	private short duration;
 	private String description;
 	
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Category category;
+	
 
 }

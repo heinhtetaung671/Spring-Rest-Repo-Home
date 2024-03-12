@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
@@ -24,8 +25,9 @@ import com.jdc.home.model.formatter.CategoryFormatter;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.jdc.home.api")
+@ComponentScan(basePackages = {"com.jdc.home.api", "com.jdc.home.aop"})
 @PropertySource(value = "classpath:/application.properties")
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AppMvcConfig implements WebMvcConfigurer{
 
 	@Autowired
