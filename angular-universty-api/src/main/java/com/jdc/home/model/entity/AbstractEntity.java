@@ -12,7 +12,7 @@ import jakarta.persistence.MappedSuperclass;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class AbstractEntity {
-
+	
 	@CreatedDate
 	protected LocalDateTime createAt;
 	@LastModifiedDate

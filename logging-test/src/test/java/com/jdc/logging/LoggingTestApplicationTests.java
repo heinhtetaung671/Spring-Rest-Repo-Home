@@ -1,11 +1,11 @@
-package com.jdc.payroll;
+package com.jdc.logging;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PayrollManagementApplicationTests {
-	
+class LoggingTestApplicationTests {
+
 	@Test
 	void contextLoads() {
 	}

@@ -3,7 +3,6 @@ package com.jdc.payroll.model;
 import java.util.List;
 import java.util.function.Function;
 
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
