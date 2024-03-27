@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-public record EmployeeForm(
+public record EmployeeCreateForm(
 		@NotBlank(message = "Please enter employee name.")
 		String name,
 		@NotBlank(message = "Please enter employee password.")
