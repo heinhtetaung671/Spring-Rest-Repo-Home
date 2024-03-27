@@ -22,6 +22,7 @@ public class Department extends AbstractEntity{
 	private int id;
 	@Column(unique = true, nullable = false)
 	private String code;
+	@Column(unique = true, nullable = false)
 	private String name;
 	
 	@OneToOne(optional = true)
