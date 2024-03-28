@@ -35,10 +35,10 @@ public class Employee extends AbstractEntity{
 	private Password password;
 
 	@ElementCollection
-	@JoinTable(uniqueConstraints = @UniqueConstraint(columnNames = "phone"))
+	@JoinTable(uniqueConstraints = @UniqueConstraint(columnNames = "phones"))
 	private List<String> phones;
 	@ElementCollection
-	@JoinTable(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+	@JoinTable(uniqueConstraints = @UniqueConstraint(columnNames = "emails"))
 	private List<String> emails;
 
 	@ManyToOne

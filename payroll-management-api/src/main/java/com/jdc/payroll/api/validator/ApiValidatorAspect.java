@@ -14,11 +14,11 @@ import com.jdc.payroll.model.exception.ValidationException;
 @Aspect
 public class ApiValidatorAspect {
 
-	@Pointcut(value = "(org.springframework.web.bind.annotation.RestController) && args(.., result)")
+	@Pointcut(value = "@within(org.springframework.web.bind.annotation.RestController)")
 	public void apiMethods() {
 	}
 
-	@Before(value = "apiMethods()", argNames = "result")
+	@Before(value = "apiMethods()  && args(.., result)", argNames = "result")
 	public void validate(BindingResult result) {
 		if (result.hasErrors()) {
 			throw new ValidationException(result.getFieldErrors().stream()
